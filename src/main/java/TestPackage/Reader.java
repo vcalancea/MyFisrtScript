@@ -25,7 +25,7 @@ public class Reader {
             XSSFWorkbook workbook = new XSSFWorkbook(fis);
             XSSFSheet sheet = workbook.getSheetAt(0);
 
-            Iterator rows = ((XSSFSheet) sheet).rowIterator();
+            Iterator rows = sheet.rowIterator();
             while (rows.hasNext()){
                 XSSFRow row = (XSSFRow) rows.next();
                 Iterator cells = row.cellIterator();
